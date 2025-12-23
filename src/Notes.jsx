@@ -17,7 +17,9 @@ function Notes() {
         </header>
         <div className="notes_ctn">
             {
-                dummy_notes.map(note=><NoteItem Key={note.id} content={note} />)
+                dummy_notes.map(note => (
+                  <div className="note"><NoteItem key={note.id} content={note} /></div>
+                ))
             }
             
         </div>

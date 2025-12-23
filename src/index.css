@@ -67,5 +67,14 @@ header input{
   
 }
 .note{
-  background-color: purple;
+  display: grid;
+  
+  background: rgba(250, 59, 250, 0.897);
+  color: white;
+  max-width: 200px;
+  max-height: 200px;
+  padding: 1rem;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0.5rem 0;
 }
