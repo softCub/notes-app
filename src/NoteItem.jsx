@@ -5,11 +5,11 @@ function NoteItem({content}) {
   console.log(content.title.substr(0,40));
   return (
     <>
-    <Link to={`/edit/${content.id}`} >
+    <Link to={`/edit/${content.id}`} className='deco' >
     
     <h4>{content.title.length >40 ? content.title.substr(0,40)+"...":content.title}</h4>
     <p>
-     {content.details.length >200 ? content.details.substr(0,50)+"...":content.details} 
+     {content.details.length >200 ? content.details.substr(0,70)+"...":content.details} 
     </p>
     </Link>
     </>

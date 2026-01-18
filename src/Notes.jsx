@@ -4,9 +4,11 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import AddIcon from '@mui/icons-material/Add';
 import Fab from '@mui/material/Fab';
+import { useNavigate } from 'react-router-dom';
 import dummy_notes from './dummy_notes.js'
 import NoteItem from './NoteItem.jsx'
 function Notes() {
+  const navigate = useNavigate();
 
   return (
     <section>
@@ -14,6 +16,7 @@ function Notes() {
             <h2 >My Notes</h2>
             <input type="text" autoFocus placeholder='Search' />
             <button className='button-9'><SearchIcon /></button>
+            
         </header>
         <div className="notes_ctn">
             {
@@ -23,7 +26,14 @@ function Notes() {
             }
             
         </div>
-        <Fab color='primary' aria-label='add' className='add'><AddIcon /></Fab>
+        <Fab 
+          color='primary' 
+          aria-label='add' 
+          className='add'
+          onClick={() => navigate('/create')}
+        >
+          <AddIcon />
+        </Fab>
     </section>
   )
 }
